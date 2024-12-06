@@ -1,0 +1,19 @@
+{
+  "title": "安卓自动化工具：adb",
+  "description": "整理安卓自动化工具adb的各种相关内容。",
+  "pluginsConfig": {
+    "github-buttons": {
+      "buttons": [
+        {
+          "repo": "android_auto_tool_adb"
+        }
+      ]
+    },
+    "sitemap-general": {
+      "prefix": "https://book.crifan.org/books/android_auto_tool_adb/website/"
+    },
+    "toolbar-button": {
+      "url": "https://book.crifan.org/books/android_auto_tool_adb/pdf/android_auto_tool_adb.pdf"
+    }
+  }
+}
