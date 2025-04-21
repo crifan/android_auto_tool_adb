@@ -21,7 +21,7 @@ TODO：
 * 【无需解决】安卓手机pm卸载app报错：Failure DELETE_FAILED_INTERNAL_ERROR
 * 【已解决】安卓手机中用adb shel中的pm去安装YouTube的apk
 * 【已解决】安卓手机Google Pixel3中用pm安装YouTube的apk报错：Failure INSTALL_FAILED_VERSION_DOWNGRADE
-* 【整理】adb命令语法帮助信息
+* 【记录】adb没有root权限就无法正常工作的相关现象
 
 ---
 

@@ -4,6 +4,12 @@
 ## adb语法
 
 ```bash
+✘ crifan@licrifandeMacBook-Pro  ~/dev/dev_tool/android/reverse_engineering/adb_root  adb --help
+```
+
+或：
+
+```bash
 > adb --help
 Android Debug Bridge version 1.0.41
 Version 33.0.2-8557947
