@@ -1,20 +1,13 @@
 # adb的help语法
 
-
 ## adb语法
 
 ```bash
-✘ crifan@licrifandeMacBook-Pro  ~/dev/dev_tool/android/reverse_engineering/adb_root  adb --help
-```
-
-或：
-
-```bash
-> adb --help
+➜  ~ adb --help
 Android Debug Bridge version 1.0.41
-Version 33.0.2-8557947
-Installed as /Users/crifan/dev/dev_tool/android/AndroidSDK/platform-tools/adb
-
+Version 34.0.4-10411341
+Installed as /Users/crifan/dev/dev_tool/android/AndroidSDK//platform-tools/adb
+Running on Darwin 22.6.0 (arm64)
 
 global options:
  -a                       listen on all network interfaces, not just localhost
@@ -28,12 +21,10 @@ global options:
  --one-device SERIAL|USB  only allowed with 'start-server' or 'server nodaemon', server will only connect to one USB device, specified by a serial number or USB device address.
  --exit-on-write-error    exit if stdout is closed
 
-
 general commands:
  devices [-l]             list connected devices (-l for long output)
  help                     show this help message
  version                  show version num
-
 
 networking:
  connect HOST[:PORT]      connect to a device via TCP/IP [default port=5555]
@@ -48,12 +39,12 @@ networking:
        localabstract:<unix domain socket name>
        localreserved:<unix domain socket name>
        localfilesystem:<unix domain socket name>
+       dev:<character device name>
        jdwp:<process pid> (remote only)
        vsock:<CID>:<port> (remote only)
        acceptfd:<fd> (listen only)
  forward --remove LOCAL   remove specific forward socket connection
  forward --remove-all     remove all forward socket connections
- ppp TTY [PARAMETER...]   run PPP over USB
  reverse --list           list all reverse socket connections from device
  reverse [--no-rebind] REMOTE LOCAL
      reverse socket connection using:
@@ -65,7 +56,6 @@ networking:
  reverse --remove-all     remove all reverse socket connections from device
  mdns check               check if mdns discovery is available
  mdns services            list all discovered services
-
 
 file transfer:
  push [--sync] [-z ALGORITHM] [-Z] LOCAL... REMOTE
@@ -86,7 +76,6 @@ file transfer:
      -z: enable compression with a specified algorithm (any/none/brotli/lz4/zstd)
      -Z: disable compression
 
-
 shell:
  shell [-e ESCAPE] [-n] [-Tt] [-x] [COMMAND...]
      run remote shell command (interactive shell if no command given)
@@ -96,7 +85,6 @@ shell:
      -t: allocate a pty if on a tty (-tt: force pty allocation)
      -x: disable remote exit codes and stdout/stderr separation
  emu COMMAND              run emulator console command
-
 
 app installation (see also `adb shell cmd package help`):
  install [-lrtsdg] [--instant] PACKAGE
@@ -125,7 +113,6 @@ app installation (see also `adb shell cmd package help`):
      remove this app package from the device
      '-k': keep the data and cache directories
 
-
 debugging:
  bugreport [PATH]
      write bugreport to given PATH [default=bugreport.zip];
@@ -134,13 +121,11 @@ debugging:
  jdwp                     list pids of processes hosting a JDWP transport
  logcat                   show device log (logcat --help for more)
 
-
 security:
  disable-verity           disable dm-verity checking on userdebug builds
  enable-verity            re-enable dm-verity checking on userdebug builds
  keygen FILE
      generate adb public/private key; private key stored in FILE,
-
 
 scripting:
  wait-for[-TRANSPORT]-STATE...
@@ -164,14 +149,12 @@ scripting:
  usb                      restart adbd listening on USB
  tcpip PORT               restart adbd listening on TCP on PORT
 
-
 internal debugging:
  start-server             ensure that there is a server running
  kill-server              kill the server if it is running
  reconnect                kick connection from host side to force reconnect
  reconnect device         kick connection from device side to force reconnect
  reconnect offline        reset offline/unauthorized devices to force reconnect
-
 
 usb:
  attach                   attach a detached USB device
@@ -185,4 +168,6 @@ environment variables:
  $ANDROID_LOG_TAGS        tags to be used by logcat (see logcat --help)
  $ADB_LOCAL_TRANSPORT_MAX_PORT max emulator scan port (default 5585, 16 emus)
  $ADB_MDNS_AUTO_CONNECT   comma-separated list of mdns services to allow auto-connect (default adb-tls-connect)
+
+Online documentation: https://android.googlesource.com/platform/packages/modules/adb/+/refs/heads/master/docs/user/adb.1.md
 ```

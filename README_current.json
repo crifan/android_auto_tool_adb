@@ -1,6 +1,6 @@
 {
-  "latestVersion": "v0.6.0",
-  "lastUpdate": "20250421",
+  "latestVersion": "v0.8.0",
+  "lastUpdate": "20250425",
   "gitRepoName": "android_auto_tool_adb",
   "bookName": "安卓自动化工具：adb",
   "bookDescription": "整理安卓自动化工具adb的各种相关内容。"
